@@ -10,6 +10,7 @@ import pages.LoginPage;
 
 public class LoginTestCase01 extends BaseClass{
 	
+	
 	@BeforeTest
 	public void testSetup() {
 		excelName = "TC001";
@@ -19,7 +20,7 @@ public class LoginTestCase01 extends BaseClass{
 	@Test(priority = 1)
 	public void validateAllElements() {
 		
-		boolean result = new LoginPage().
+		boolean result = new LoginPage(driver).
 		validateAllTheElementsInLoginPage();
 		AssertJUnit.assertEquals(result, true);
 	}
@@ -27,7 +28,7 @@ public class LoginTestCase01 extends BaseClass{
 	@Test(priority = 2,dataProvider = "ExcelData")
 	public void LoginwithCorrectCredentials(String userName, String password) {
 		
-		boolean result = new LoginPage().
+		boolean result = new LoginPage(driver).
 		enterUserName(userName).
 		enterPassword(password).
 		validLogin().
@@ -41,7 +42,7 @@ public class LoginTestCase01 extends BaseClass{
 	@Test(priority = 3)
 	public void LoginWithIncorrectcredentials() throws Exception {
 		
-		boolean result = new LoginPage().
+		boolean result = new LoginPage(driver).
 		enterUserName("fff").
 		enterPassword("rrr").
 		inValidLogin().

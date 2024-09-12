@@ -13,7 +13,7 @@ import utility.ExcelReader;
 
 public class BaseClass {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 	public int browser = 1;
 	public String url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	

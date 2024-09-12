@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.BaseClass;
 
@@ -11,8 +12,11 @@ public class HomePage extends BaseClass{
 	By pim = By.xpath("//span[text()='PIM']");
 	By logoutArrow = By.className("oxd-userdropdown-tab");
 	By logout = By.xpath("//a[text()='Logout']");
+	public WebDriver driver;
 	
-	
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+	}
 	
 	public HomePage validateAllElementsInHomePage() {
 		if(driver.findElement(homeIcon).isDisplayed() && driver.findElement(administrator).isDisplayed() && driver.findElement(pim).isDisplayed()) {
@@ -27,7 +31,7 @@ public class HomePage extends BaseClass{
 	public LoginPage clickOnLogout() {
 		driver.findElement(logoutArrow).click();
 		driver.findElement(logout).click();
-		return new LoginPage();
+		return new LoginPage(driver);
 	}
 	
 	

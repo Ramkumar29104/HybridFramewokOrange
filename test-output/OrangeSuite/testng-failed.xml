@@ -6,7 +6,9 @@
       <class name="tests.LoginTestCase01">
         <methods>
           <include name="invokeBrowser"/>
+          <include name="LoginWithIncorrectcredentials"/>
           <include name="testSetup"/>
+          <include name="validateAllElements"/>
           <include name="closeBrowser"/>
           <include name="LoginwithCorrectCredentials" invocation-numbers="0"/>
         </methods>

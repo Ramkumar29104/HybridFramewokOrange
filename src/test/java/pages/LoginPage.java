@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.BaseClass;
 
@@ -12,6 +13,11 @@ public class LoginPage extends BaseClass{
 	By forgotPassword = By.xpath("//p[text()='Forgot your password? ']");
 	By webSiteLink = By.xpath("//a[text()='OrangeHRM, Inc']");
 	By errorMsg = By.xpath("//p[text()='Invalid credentials']");
+	public WebDriver driver;
+	
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+	}
 	
 	public boolean validateAllTheElementsInLoginPage() {
 		
@@ -36,7 +42,7 @@ public class LoginPage extends BaseClass{
 	
 	public HomePage validLogin() {
 		driver.findElement(login).click();
-		return new HomePage();
+		return new HomePage(driver);
 	}
 	
 	public LoginPage inValidLogin() throws Exception {
