@@ -6,11 +6,13 @@
       <class name="tests.LoginTestCase01">
         <methods>
           <include name="invokeBrowser"/>
+          <include name="reportInit"/>
           <include name="LoginWithIncorrectcredentials"/>
           <include name="testSetup"/>
           <include name="validateAllElements"/>
           <include name="closeBrowser"/>
-          <include name="LoginwithCorrectCredentials" invocation-numbers="0"/>
+          <include name="endreport"/>
+          <include name="LoginwithCorrectCredentials"/>
         </methods>
       </class> <!-- tests.LoginTestCase01 -->
     </classes>

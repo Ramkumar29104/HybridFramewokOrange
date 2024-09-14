@@ -3,23 +3,33 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import base.BaseClass;
+import com.aventstack.extentreports.ExtentTest;
 
-public class HomePage extends BaseClass{
-	
-	By homeIcon = By.className("oxd-brand-banner");
-	By administrator = By.xpath("//span[text()='Admin']");
-	By pim = By.xpath("//span[text()='PIM']");
-	By logoutArrow = By.className("oxd-userdropdown-tab");
-	By logout = By.xpath("//a[text()='Logout']");
+import base.BaseClass;
+import library.Seleniumwrapper;
+
+public class HomePage extends BaseClass {
+
+	private By homeIcon = By.className("oxd-brand-banner");
+	private By administrator = By.xpath("//span[text()='Admin']");
+	private By pim = By.xpath("//span[text()='PIM']");
+	private By logoutArrow = By.className("oxd-userdropdown-tab");
+	private By logout = By.xpath("//a[text()='Logout']");
 	public WebDriver driver;
-	
-	public HomePage(WebDriver driver) {
+	public ExtentTest node;
+	Seleniumwrapper wrap;
+
+	public HomePage(WebDriver driver, ExtentTest node) {
 		this.driver = driver;
+		this.node = node;
+		wrap = new Seleniumwrapper(driver, node);
 	}
-	
+
 	public HomePage validateAllElementsInHomePage() {
-		if(driver.findElement(homeIcon).isDisplayed() && driver.findElement(administrator).isDisplayed() && driver.findElement(pim).isDisplayed()) {
+
+		if (wrap.verifyDisplayWithreturn(driver.findElement(homeIcon))
+				&& wrap.verifyDisplayWithreturn(driver.findElement(administrator))
+				&& wrap.verifyDisplayWithreturn(driver.findElement(pim))) {
 			System.out.println("User is in home page");
 		}
 		else {
@@ -27,13 +37,11 @@ public class HomePage extends BaseClass{
 		}
 		return this;
 	}
-	
+
 	public LoginPage clickOnLogout() {
-		driver.findElement(logoutArrow).click();
-		driver.findElement(logout).click();
-		return new LoginPage(driver);
+		wrap.click(driver.findElement(logoutArrow));
+		wrap.click(driver.findElement(logout));
+		return new LoginPage(driver, node);
 	}
-	
-	
 
 }

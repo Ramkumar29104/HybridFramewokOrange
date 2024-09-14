@@ -13,14 +13,20 @@ public class LoginTestCase01 extends BaseClass{
 	
 	@BeforeTest
 	public void testSetup() {
-		excelName = "TC001";
+		excelName = "login";
+		testcaseName = "Login";
+		testCaseDescription = "Validating Login Functionality";
+		module = "Login module";
+		author = "Ram Kumar";
+		category = "Smoke";
+		
 	}
 	
 	
 	@Test(priority = 1)
 	public void validateAllElements() {
 		
-		boolean result = new LoginPage(driver).
+		boolean result = new LoginPage(driver, node).
 		validateAllTheElementsInLoginPage();
 		AssertJUnit.assertEquals(result, true);
 	}
@@ -28,7 +34,7 @@ public class LoginTestCase01 extends BaseClass{
 	@Test(priority = 2,dataProvider = "ExcelData")
 	public void LoginwithCorrectCredentials(String userName, String password) {
 		
-		boolean result = new LoginPage(driver).
+		boolean result = new LoginPage(driver, node).
 		enterUserName(userName).
 		enterPassword(password).
 		validLogin().
@@ -42,7 +48,7 @@ public class LoginTestCase01 extends BaseClass{
 	@Test(priority = 3)
 	public void LoginWithIncorrectcredentials() throws Exception {
 		
-		boolean result = new LoginPage(driver).
+		boolean result = new LoginPage(driver, node).
 		enterUserName("fff").
 		enterPassword("rrr").
 		inValidLogin().
