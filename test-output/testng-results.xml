@@ -2,24 +2,28 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-12T10:26:32 IST" name="OrangeSuite" finished-at="2024-09-12T10:28:55 IST" duration-ms="143707">
+  <suite started-at="2024-09-14T14:22:18 IST" name="OrangeSuite" finished-at="2024-09-14T14:22:37 IST" duration-ms="19378">
     <groups>
     </groups>
-    <test started-at="2024-09-12T10:26:32 IST" name="OrangeTest" finished-at="2024-09-12T10:28:55 IST" duration-ms="143707">
+    <test started-at="2024-09-14T14:22:18 IST" name="OrangeTest" finished-at="2024-09-14T14:22:37 IST" duration-ms="19378">
       <class name="tests.LoginTestCase01">
-        <test-method is-config="true" signature="testSetup()[pri:0, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:26:32 IST" name="testSetup" finished-at="2024-09-12T10:26:32 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="reportInit()[pri:0, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:17 IST" name="reportInit" finished-at="2024-09-14T14:22:18 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportInit -->
+        <test-method is-config="true" signature="testSetup()[pri:0, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:18 IST" name="testSetup" finished-at="2024-09-14T14:22:18 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:26:32 IST" name="invokeBrowser" finished-at="2024-09-12T10:28:18 IST" duration-ms="106430" status="PASS">
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:18 IST" name="invokeBrowser" finished-at="2024-09-14T14:22:25 IST" duration-ms="7237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method signature="validateAllElements()[pri:1, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:28:18 IST" name="validateAllElements" finished-at="2024-09-12T10:28:21 IST" duration-ms="2729" status="PASS">
+        <test-method signature="validateAllElements()[pri:1, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:25 IST" name="validateAllElements" finished-at="2024-09-14T14:22:27 IST" duration-ms="1277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAllElements -->
-        <test-method signature="LoginwithCorrectCredentials(java.lang.String,java.lang.String)[pri:2, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:28:21 IST" name="LoginwithCorrectCredentials" data-provider="ExcelData" finished-at="2024-09-12T10:28:50 IST" duration-ms="28971" status="PASS">
+        <test-method signature="LoginwithCorrectCredentials(java.lang.String,java.lang.String)[pri:2, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:28 IST" name="LoginwithCorrectCredentials" data-provider="ExcelData" finished-at="2024-09-14T14:22:31 IST" duration-ms="3670" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,14 +39,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginwithCorrectCredentials -->
-        <test-method signature="LoginWithIncorrectcredentials()[pri:3, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:28:50 IST" name="LoginWithIncorrectcredentials" finished-at="2024-09-12T10:28:55 IST" duration-ms="5107" status="PASS">
+        <test-method signature="LoginWithIncorrectcredentials()[pri:3, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:31 IST" name="LoginWithIncorrectcredentials" finished-at="2024-09-14T14:22:37 IST" duration-ms="6075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginWithIncorrectcredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestCase01@484970b0]" started-at="2024-09-12T10:28:55 IST" name="closeBrowser" finished-at="2024-09-12T10:28:55 IST" duration-ms="85" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:37 IST" name="closeBrowser" finished-at="2024-09-14T14:22:37 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="endreport()[pri:0, instance:tests.LoginTestCase01@28975c28]" started-at="2024-09-14T14:22:37 IST" name="endreport" finished-at="2024-09-14T14:22:38 IST" duration-ms="421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
       </class> <!-- tests.LoginTestCase01 -->
     </test> <!-- OrangeTest -->
   </suite> <!-- OrangeSuite -->
